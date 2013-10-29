@@ -5,6 +5,11 @@
 	height: 600px;
 }
 
+body {
+	color: #34495e;
+	font-family: "OpenSans";
+}
+
 input {
 	background: white;
 	border-radius: 1px;
