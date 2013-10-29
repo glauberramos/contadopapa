@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 	//click event
     $('#adiciona').click(function() {
-        $('#pessoas .pessoa').last().after('<div class=\"pessoa\">Nome: <input class=\"name\" type=\"text\"></input> Pagou <input placeholder="R$: 00.00" class=\"number\" type=\"text\"></input></div>')
+        $('#pessoas .pessoa').last().after('<div class=\"pessoa\"><i class=\"fa-user\"></i><input class=\"name\" type=\"text\"></input><i class=\"fa-money\"></i><input placeholder="R$: 00.00" class=\"number\" type=\"text\"></input></div>')
     });        
 
     $('#calcula').click(function() {

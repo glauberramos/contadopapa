@@ -10,6 +10,11 @@ h1 {
 	color: #3a5168;
 }
 
+i {
+	color: white;
+	font-size: 1.5em;
+}
+
 body {
 	font-size: 16px;
 	font-family: "OpenSans";
@@ -49,8 +54,4 @@ button {
 	color: white;
 	padding: 5px 10px;
 	font-size: 1.25em;
-}
-
-a {
-
 }
