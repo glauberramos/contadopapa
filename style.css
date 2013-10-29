@@ -4,3 +4,21 @@
 	width: 100%;
 	height: 600px;
 }
+
+input {
+	background: white;
+	border-radius: 1px;
+	border: 1px solid #aaa;
+	height: 25px;
+}
+
+.pessoa {
+	margin-bottom: 10px;
+}
+
+button {
+	border: 1px solid #aaa;
+	height: 30px;
+	background: white;
+	cursor: pointer;
+}

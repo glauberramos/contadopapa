@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 	//click event
     $('#adiciona').click(function() {
-        $('#pessoas .pessoa').last().append('<div class=\"pessoa\"><input class=\"name\" type=\"text\"></input><input class=\"number\" type=\"text\"></input></div>')
+        $('#pessoas .pessoa').last().append('<div class=\"pessoa\">Nome: <input class=\"name\" type=\"text\"></input> Pagou R$: <input class=\"number\" type=\"text\"></input></div>')
     });        
 
     $('#calcula').click(function() {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         $('#resultado').html($('#resultado').html() + 'Total conta: ' + resultado.totalConta + '<br>');
-        $('#resultado').html($('#resultado').html() + 'Volar por pessoa: ' + resultado.valorPorPessoa + '<br>');
+        $('#resultado').html($('#resultado').html() + 'Volar por pessoa: ' + Math.round(resultado.valorPorPessoa*100)/100 + '<br>');
 
         for (var string in resultado.final) {
             $('#resultado').html($('#resultado').html() + resultado.final[string] + '<br>');
@@ -53,17 +53,7 @@ var resultado = {
     final: []
 }
 
-var pessoas = [
-    // { nome: 'Glauber Ramos', pagou: 153.33 },
-    // { nome: 'Gabriel Andrade', pagou: 0 },
-    // { nome: 'Diogo Ribeiro', pagou: 47.11 },
-    // { nome: 'Thaisse dos Campos', pagou: 98.12 },
-    // { nome: 'Pedro Palaoro', pagou: 11.32 },
-    // { nome: 'Rodrigo Testa', pagou: 22 },
-    // { nome: 'Déia Veleoe', pagou: 98.12 },
-    // { nome: 'Lucas Valadares', pagou: 165 },
-    // { nome: 'Fernanada Paganini', pagou: 33 }
-];
+var pessoas = [];
 
 
 function precisaReceber(pessoa) {
