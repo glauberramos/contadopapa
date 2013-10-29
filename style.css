@@ -7,19 +7,23 @@
 
 h1 {
 	font-size: 2em;
+	color: #3a5168;
 }
 
 body {
-	color: #34495e;
 	font-size: 16px;
 	font-family: "OpenSans";
+	background: #3498db;
+	color: white;
 }
 
 input {
 	background: white;
-	border-radius: 1px;
-	border: 1px solid #aaa;
-	height: 25px;
+	border: none;
+	height: 30px;
+	padding: 5px 7px;
+	font-size: 1.1em;
+	color: #34495e;
 }
 
 #resultado {
