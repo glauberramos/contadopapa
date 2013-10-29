@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 	//click event
     $('#adiciona').click(function() {
-        $('#pessoas .pessoa').last().append('<div class=\"pessoa\">Nome: <input class=\"name\" type=\"text\"></input> Pagou R$: <input class=\"number\" type=\"text\"></input></div>')
+        $('#pessoas .pessoa').last().after('<div class=\"pessoa\">Nome: <input class=\"name\" type=\"text\"></input> Pagou <input placeholder="R$: 00.00" class=\"number\" type=\"text\"></input></div>')
     });        
 
     $('#calcula').click(function() {
@@ -38,8 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        $('#resultado').html($('#resultado').html() + 'Total conta: ' + resultado.totalConta + '<br>');
-        $('#resultado').html($('#resultado').html() + 'Volar por pessoa: ' + Math.round(resultado.valorPorPessoa*100)/100 + '<br>');
+        $('#resultado').html($('#resultado').html() + 'Valor total da conta: ' + resultado.totalConta + '<br>');
+        $('#resultado').html($('#resultado').html() + 'Valor por pessoa: ' + Math.round(resultado.valorPorPessoa*100)/100 + '<br>');
 
         for (var string in resultado.final) {
             $('#resultado').html($('#resultado').html() + resultado.final[string] + '<br>');
@@ -86,5 +86,12 @@ function pagaDivida(pessoaDevendo, pessoaRecebendo, valor) {
 
 function escreveQuantoVaiPagar(pessoaDevendo, pessoaRecebendo, valor) {
 	resultado.final.push(
-        pessoaDevendo.nome + ' pagar ' + Math.round(valor*100)/100 + ' para ' + pessoaRecebendo.nome);
+        pessoaDevendo.nome + ' pagar ' + roundMoney(Math.round(valor*100)/100) + ' para ' + pessoaRecebendo.nome);
+}
+
+function roundMoney(money) {
+    var integer = Math.floor(money);
+    var fraction = Math.round((money % 1 *100)/10)*10;
+
+    return parseFloat(integer + '.' + fraction);
 }

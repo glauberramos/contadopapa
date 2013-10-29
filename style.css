@@ -17,8 +17,15 @@ input {
 }
 
 button {
-	border: 1px solid #aaa;
-	height: 30px;
-	background: white;
+	border: none;
+	/*height: 30px;*/
+	background: #2ecc71;
 	cursor: pointer;
+	color: white;
+	padding: 5px 10px;
+	font-size: 1.25em;
+}
+
+a {
+
 }
