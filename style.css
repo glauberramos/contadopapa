@@ -75,6 +75,23 @@ input::-webkit-input-placeholder {
 	margin-bottom: 10px;
 }
 
+#result {
+	margin-top: 20px;
+	color: white;
+	display: block;
+	background: #33475E;
+}
+
+number {
+	display: inline-block;
+	font-size: 3em;
+}
+
+em {
+	display: block;
+	font-size: 0.3em;
+}
+
 a {
 	color: #26AF60;
 	float: right;
