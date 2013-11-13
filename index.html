@@ -1,29 +1,58 @@
 <html>
 	<head>
+		<meta charset="utf-8"> 
 		<link rel="stylesheet" href="font-awesome.css">
 		<link rel="stylesheet" href="style.css">
 		<script type="text/javascript" src="zepto.js"></script>
+		<script type="text/javascript" src="handlebars-v1.1.2.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
 		<div>
 			<div id="pessoas">
-				<h1>Quem esta participando do churras/viagem/evento?</h1>
+				<h1>Quem esta participando do evento?</h1>
 				<div class="pessoa">
-					<i class="fa-user"></i><input class="name" type="text"></input><i class="fa-money"></i><input placeholder="R$: 00.00" class="number" type="text"></input>
+					<span class="name-container"><input  placeholder="João" class="name" type="text"></input></span>
+					<span class="money-container"><input placeholder="R$: 20.00" class="number" type="text"></input></span>
 				</div>
 				<div class="pessoa">
-					<i class="fa-user"></i><input class="name" type="text"></input><i class="fa-money"></i><input placeholder="R$: 00.00" class="number" type="text"></input>
+					<span class="name-container"><input placeholder="Maria" class="name" type="text"></input></span>
+					<span class="money-container"><input placeholder="R$: 30.00" class="number" type="text"></input></span>
 				</div>
 				<div class="pessoa">
-					<i class="fa-user"></i><input class="name" type="text"></input><i class="fa-money"></i><input placeholder="R$: 00.00" class="number" type="text"></input>
+					<span class="name-container"><input placeholder="José" class="name" type="text"></input></span>
+					<span class="money-container"><input placeholder="R$: 10.00" class="number" type="text"></input></span>
 				</div>
 				<button id="calcula">Calcula</button>
-				<a href="javascript:void(0)" id="adiciona">+ Adiciona nova pessoa</a>
+				<a href="javascript:void(0)" id="adiciona">+ Adiciona pessoa</a>
 			</div>
 			<div id="resultado">
 				
 			</div>	
 		</div>
+
+		<script id="pessoa-template" type="text/x-handlebars-template">
+			<div class="pessoa">
+				<span class="name-container">
+					<input placeholder="José" class="name" type="text"></input>
+				</span>
+				<span class="money-container">
+					<input placeholder="R$: 10.00" class="number" type="text"></input>
+				</span>
+			</div>
+		</script>
+		<script id="result-template" type="text/x-handlebars-template">
+			<span id="result">
+				<em>valor total</em>
+				<number>{{ valorTotal }}</number>
+				<em>valor pessoa</em>
+				<number>{{ valorPessoa }}</number>
+			</span>
+		</script>
+		<script id="pessoa-result-template" type="text/x-handlebars-template">
+			<span>{{ pagante }}</span>
+			<span>{{ value }}</span>
+			<span>{{ recebedor }}</span>
+		</script>
 	</body>
 </html>

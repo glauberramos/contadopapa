@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 	//click event
     $('#adiciona').click(function() {
-        $('#pessoas .pessoa').last().after('<div class=\"pessoa\"><i class=\"fa-user\"></i><input class=\"name\" type=\"text\"></input><i class=\"fa-money\"></i><input placeholder="R$: 00.00" class=\"number\" type=\"text\"></input></div>')
+        var pessoaTemplate = Handlebars.compile($("#pessoa-template").html());
+        $('#pessoas .pessoa').last().after(pessoaTemplate());
     });        
 
     $('#calcula').click(function() {
@@ -38,11 +39,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        $('#resultado').html($('#resultado').html() + 'Valor total da conta: ' + resultado.totalConta + '<br>');
-        $('#resultado').html($('#resultado').html() + 'Valor por pessoa: ' + Math.round(resultado.valorPorPessoa*100)/100 + '<br>');
+        var resultTemplate = Handlebars.compile($("#result-template").html());
+        var resultDados = {
+            valorPessoa: Math.round(resultado.valorPorPessoa*100)/100,
+            valorTotal: resultado.totalConta
+        };
+
+        $('#resultado').html(resultTemplate(resultDados));
 
         for (var string in resultado.final) {
-            $('#resultado').html($('#resultado').html() + resultado.final[string] + '<br>');
+            $('#resultado').html($('#resultado').html() + resultado.final[string]);
         };
     });
 });
@@ -85,8 +91,14 @@ function pagaDivida(pessoaDevendo, pessoaRecebendo, valor) {
 }
 
 function escreveQuantoVaiPagar(pessoaDevendo, pessoaRecebendo, valor) {
-	resultado.final.push(
-        pessoaDevendo.nome + ' pagar ' + roundMoney(Math.round(valor*100)/100) + ' para ' + pessoaRecebendo.nome);
+    var pessoaResultTemplate = Handlebars.compile($("#pessoa-result-template").html());
+    var resultDados = {
+            pagante: pessoaDevendo.nome,
+            recebedor: pessoaRecebendo.nome,
+            value: roundMoney(Math.round(valor*100)/100) 
+        };
+
+	resultado.final.push(pessoaResultTemplate(resultDados));
 }
 
 function roundMoney(money) {

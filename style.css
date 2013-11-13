@@ -6,49 +6,83 @@
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 1.3em;
 	color: #3a5168;
 }
 
 i {
-	color: white;
+	color: #34495e;
 	font-size: 1.5em;
 }
 
 body {
 	font-size: 16px;
 	font-family: "OpenSans";
-	background: #3498db;
+	background: white;
 	color: #34495e;
 }
 
 input {
-	background: #3498db;
-	border: none;
-	padding: 5px;
+	background: white;
 	font-size: 1.1em;
-	color: white;
-	border-bottom: 2px solid #2C659E;
+	padding: 5px;
+	color: #34495e;
 	outline: none;
-
+	border: 1px solid #6189B1;
+	width: 49%;
 }
 
+.name-container:before {
+	content: "QUEM";
+	font-family: "OpenSans";	
+	color: #999;
+	font-size: 0.6em;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 4em;
+	margin-left: 5px;
+	position: absolute;
+}
+
+.money-container:before {
+	content: "PAGOU";	
+	font-family: "OpenSans";
+	color: #999;
+	font-size: 0.6em;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 4em;
+	margin-left: 5px;
+	position: absolute;
+}
+
+.name, .number {
+	padding-left: 45px;
+}
 
 input::-webkit-input-placeholder {
-	color: white;
+	color: #bbb;
+	font-family: "OpenSans";
+	font-style: normal;
+	font-weight: normal;
 };
 
 #resultado {
-	margin-top: 20px;
+	margin-top: 50px;
 }
 
 .pessoa {
 	margin-bottom: 10px;
 }
 
+a {
+	color: #26AF60;
+	float: right;
+	margin-top: 7px;
+}
+
 button {
 	border: none;
-	/*height: 30px;*/
 	background: #2ecc71;
 	cursor: pointer;
 	color: white;
