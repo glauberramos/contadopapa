@@ -43,15 +43,15 @@
 		</script>
 		<script id="result-template" type="text/x-handlebars-template">
 			<span id="result">
-				<number><em>valor total</em>{{ valorTotal }}</number>
-				<number><em>valor pessoa</em>{{ valorPessoa }}</number>
+				<number class="valor-pessoa"><em>valor pessoa</em>{{ valorPessoa }}</number>
+				<number class="valor-total"><em>valor total</em>{{ valorTotal }}</number>
 			</span>
 		</script>
 		<script id="pessoa-result-template" type="text/x-handlebars-template">
-			<div>
-				<span>{{ pagante }}</span>
+			<div class="pessoa-result">
+				<span class="left">{{ pagante }}<em>PAGAR</em></span>
 				<number>{{ value }}</number>
-				<span>{{ recebedor }}</span>
+				<span class="right">{{ recebedor }}<em>PARA</em></span>
 			</div>
 		</script>
 	</body>

@@ -6,7 +6,7 @@
 }
 
 h1 {
-	font-size: 1.3em;
+	font-size: 1.2em;
 	color: #3a5168;
 }
 
@@ -24,12 +24,16 @@ body {
 
 input {
 	background: white;
-	font-size: 1.1em;
-	padding: 5px;
+	font-size: 1em;
+	padding: 10px 5px;
 	color: #34495e;
 	outline: none;
-	border: 1px solid #6189B1;
-	width: 49%;
+	border: 1px solid #aaa;
+	width: 58%;
+}
+
+.number {
+	width: 40%;
 }
 
 .name-container:before {
@@ -39,7 +43,7 @@ input {
 	font-size: 0.6em;
 	font-style: normal;
 	font-weight: normal;
-	line-height: 4em;
+	line-height: 4.6em;
 	margin-left: 5px;
 	position: absolute;
 }
@@ -51,18 +55,19 @@ input {
 	font-size: 0.6em;
 	font-style: normal;
 	font-weight: normal;
-	line-height: 4em;
+	line-height: 4.6em;
 	margin-left: 5px;
 	position: absolute;
 }
 
 .name, .number {
-	padding-left: 45px;
+	padding-left: 40px;
 }
 
 input::-webkit-input-placeholder {
 	color: #bbb;
 	font-family: "OpenSans";
+	line-height: 1em;
 	font-style: normal;
 	font-weight: normal;
 };
@@ -80,11 +85,13 @@ input::-webkit-input-placeholder {
 	color: white;
 	display: block;
 	background: #33475E;
+	padding: 10px 25px;
+	border-bottom: 4px solid white;
 }
 
 number {
 	display: inline-block;
-	font-size: 3em;
+	font-size: 2.5em;
 }
 
 em {
@@ -96,6 +103,42 @@ a {
 	color: #26AF60;
 	float: right;
 	margin-top: 7px;
+}
+
+.valor-total {
+	float: right;
+}
+
+.pessoa-result:nth-child(even) {
+	background: #324938;
+	color: white;
+}
+
+.pessoa-result {
+	padding: 5px 10px;
+	text-align: center;
+}
+
+.pessoa-result span {
+	display: inline-block;
+	font-size: 1.3em;
+	margin: 0;
+}
+
+.pessoa-result em {
+	font-size: 0.55em;
+}
+
+.pessoa-result number {
+	margin: 0 10px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
 }
 
 button {
