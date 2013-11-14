@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
         $('#resultado').text('');
 
         $('.pessoa').each(function () {
-            pessoas.push({ nome: $(this).find('.name').val(), pagou: Number($(this).find('.number').val()) });
+            if($(this).find('.name').val() != "") {
+                pessoas.push({ nome: $(this).find('.name').val(), pagou: Number($(this).find('.number').val()) });
+            }
         });
 
          //calcula total da conta

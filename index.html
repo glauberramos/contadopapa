@@ -10,18 +10,18 @@
 	<body>
 		<div>
 			<div id="pessoas">
-				<h1>Quem esta participando do evento?</h1>
+				<h1>Quem pagou a conta do papa?</h1>
 				<div class="pessoa">
 					<span class="name-container"><input  placeholder="João" class="name" type="text"></input></span>
-					<span class="money-container"><input placeholder="R$: 20.00" class="number" type="text"></input></span>
+					<span class="money-container"><input placeholder="20.00" class="number" type="text"></input></span>
 				</div>
 				<div class="pessoa">
 					<span class="name-container"><input placeholder="Maria" class="name" type="text"></input></span>
-					<span class="money-container"><input placeholder="R$: 30.00" class="number" type="text"></input></span>
+					<span class="money-container"><input placeholder="30.00" class="number" type="text"></input></span>
 				</div>
 				<div class="pessoa">
 					<span class="name-container"><input placeholder="José" class="name" type="text"></input></span>
-					<span class="money-container"><input placeholder="R$: 10.00" class="number" type="text"></input></span>
+					<span class="money-container"><input placeholder="10.00" class="number" type="text"></input></span>
 				</div>
 				<button id="calcula">Calcula</button>
 				<a href="javascript:void(0)" id="adiciona">+ Adiciona pessoa</a>
@@ -37,14 +37,14 @@
 					<input placeholder="José" class="name" type="text"></input>
 				</span>
 				<span class="money-container">
-					<input placeholder="R$: 10.00" class="number" type="text"></input>
+					<input placeholder="10.00" class="number" type="text"></input>
 				</span>
 			</div>
 		</script>
 		<script id="result-template" type="text/x-handlebars-template">
 			<span id="result">
-				<number class="valor-pessoa"><em>valor pessoa</em>{{ valorPessoa }}</number>
-				<number class="valor-total"><em>valor total</em>{{ valorTotal }}</number>
+				<number class="valor-pessoa"><em>VALOR PESSOA</em>{{ valorPessoa }}</number>
+				<number class="valor-total right"><em>VALOR TOTAL</em>{{ valorTotal }}</number>
 			</span>
 		</script>
 		<script id="pessoa-result-template" type="text/x-handlebars-template">

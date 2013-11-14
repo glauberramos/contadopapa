@@ -7,7 +7,8 @@
 
 h1 {
 	font-size: 1.2em;
-	color: #3a5168;
+	font-weight: normal;
+	font-style: normal;
 }
 
 i {
@@ -20,6 +21,8 @@ body {
 	font-family: "OpenSans";
 	background: white;
 	color: #34495e;
+	padding: 0;
+	margin: 0;
 }
 
 input {
@@ -30,6 +33,13 @@ input {
 	outline: none;
 	border: 1px solid #aaa;
 	width: 58%;
+	border-radius: 2px;
+}
+
+#pessoas {
+	padding: 10px 5px;
+	background: #34495e;
+	color: white;
 }
 
 .number {
@@ -81,10 +91,10 @@ input::-webkit-input-placeholder {
 }
 
 #result {
-	margin-top: 20px;
+	margin-top: 5px;
 	color: white;
 	display: block;
-	background: #33475E;
+	background: #2A4C74;
 	padding: 10px 25px;
 	border-bottom: 4px solid white;
 }
@@ -97,20 +107,19 @@ number {
 em {
 	display: block;
 	font-size: 0.3em;
+	font-style: "OpenSans";
+	font-style: italic;
+	font-weight: normal;
 }
 
 a {
-	color: #26AF60;
+	color: white;
 	float: right;
 	margin-top: 7px;
 }
 
-.valor-total {
-	float: right;
-}
-
-.pessoa-result:nth-child(even) {
-	background: #324938;
+.pessoa-result:nth-child(odd) {
+	background: #2A4C74;
 	color: white;
 }
 
@@ -130,15 +139,18 @@ a {
 }
 
 .pessoa-result number {
-	margin: 0 10px;
+	margin: 0 5px;
+	line-height: 1.2em;
 }
 
 .left {
 	float: left;
+	text-align: left;
 }
 
 .right {
 	float: right;
+	text-align: right;
 }
 
 button {
