@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
+    $('input').first().focus();
+
 	//click event
     $('#adiciona').click(function() {
         var pessoaTemplate = Handlebars.compile($("#pessoa-template").html());
         $('#pessoas .pessoa').last().after(pessoaTemplate());
+
+        $('.name').last().focus();
+
     });        
 
     $('#calcula').click(function() {
