@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 resultado.error = true;
             }
 
-            if($(this).find('.name').val() != "") {
+            if($(this).find('.name').val().trim() != "") {
                 pessoas.push({ nome: $(this).find('.name').val(), pagou: Number($(this).find('.number').val()) });
             }
         });
