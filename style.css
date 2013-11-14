@@ -32,7 +32,7 @@ input {
 	color: #34495e;
 	outline: none;
 	border: 1px solid #aaa;
-	width: 58%;
+	width: 55%;
 	border-radius: 2px;
 }
 
@@ -44,6 +44,21 @@ input {
 
 .number {
 	width: 40%;
+}
+
+.error {
+	background: rgb(255, 45, 45);
+	width: 100%;
+	display: block;
+	height: 50px;
+	font-size: 2em;
+	text-align: center;
+	color: white;
+	font-style: bold;
+}
+
+.name-container {
+	margin-right: 10px;
 }
 
 .name-container:before {

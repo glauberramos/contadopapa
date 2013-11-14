@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         resultado = {
             totalConta: 0,
+            error: false,
             valorPorPessoa: 0,
             final: []
         };
@@ -17,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
         $('#resultado').text('');
 
         $('.pessoa').each(function () {
+            if(Number($(this).find('.number').val()) == NaN) {
+                resultado.error = true;
+            }
+
             if($(this).find('.name').val() != "") {
                 pessoas.push({ nome: $(this).find('.name').val(), pagou: Number($(this).find('.number').val()) });
             }
@@ -47,11 +52,15 @@ document.addEventListener("DOMContentLoaded", function() {
             valorTotal: resultado.totalConta
         };
 
-        $('#resultado').html(resultTemplate(resultDados));
+        if (resultado.error = false) {
+            $('#resultado').html(resultTemplate(resultDados));
 
-        for (var string in resultado.final) {
-            $('#resultado').html($('#resultado').html() + resultado.final[string]);
-        };
+            for (var string in resultado.final) {
+                $('#resultado').html($('#resultado').html() + resultado.final[string]);
+            };
+        } else {
+            $('#resultado').html('<span class="error">Valor Incorreto</span>');
+        }
     });
 });
 
