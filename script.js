@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $('#resultado').text('');
 
         $('.pessoa').each(function () {
-            if(Number($(this).find('.number').val()) == NaN) {
+            if(isNaN(Number($(this).find('.number').val()))) {
                 resultado.error = true;
             }
 
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
             valorTotal: resultado.totalConta
         };
 
-        if (resultado.error = false) {
+        if (!resultado.error) {
             $('#resultado').html(resultTemplate(resultDados));
 
             for (var string in resultado.final) {

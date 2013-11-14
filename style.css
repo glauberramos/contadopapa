@@ -55,6 +55,7 @@ input {
 	text-align: center;
 	color: white;
 	font-style: bold;
+	border-top: 4px solid white;
 }
 
 .name-container {
