@@ -18,6 +18,8 @@ h1 {
 	background: white;
 	margin: 0;
 	padding: 0;
+	padding-left: 10px;
+	padding-top: 10px;
 }
 
 i {
@@ -41,19 +43,19 @@ input {
 	color: #34495e;
 	outline: none;
 	border: none;
-	border-bottom: 1px solid #BABABA;
+	border-bottom: 1px solid #ccc;
 	width: 59%;
 	margin: 0;
 	float: left;
 }
 
 input:nth-child(odd) {
-	border-right: 1px solid #BABABA;
+	border-right: 1px solid #ccc;
 }
 
 #pessoas {
 	background: white;
-	color: #BABABA;
+	color: #ccc;
 }
 
 .number {
@@ -64,8 +66,8 @@ input:nth-child(odd) {
 	background: rgb(255, 45, 45);
 	width: 100%;
 	display: block;
-	height: 50px;
-	font-size: 2em;
+	height: 40px;
+	font-size: 1.7em;
 	text-align: center;
 	color: white;
 	font-style: bold;
@@ -99,7 +101,7 @@ input::-webkit-input-placeholder {
 
 number {
 	display: inline-block;
-	font-size: 2.5em;
+	font-size: 2em;
 }
 
 em {
@@ -110,8 +112,13 @@ em {
 	font-weight: normal;
 }
 
+.actions {
+	clear: both;
+	padding: 10px;
+}
+
 a {
-	color: black;
+	color: #999;
 	float: right;
 	margin-top: 7px;
 }
@@ -138,7 +145,7 @@ a {
 
 .pessoa-result number {
 	margin: 0 5px;
-	line-height: 1.2em;
+	line-height: 1.4em;
 }
 
 .left {
@@ -157,5 +164,5 @@ button {
 	cursor: pointer;
 	color: white;
 	padding: 5px 10px;
-	font-size: 1.25em;
+	font-size: 1.15em;
 }

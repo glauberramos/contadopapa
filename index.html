@@ -8,28 +8,26 @@
 		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
-		<div>
-			<div id="pessoas">
-				<h1>CONTA DO PAPA</h1>
-				<div class="pessoa">
-					<input  placeholder="Quem" class="name" type="text"></input>
-					<input placeholder="Pagou" class="number" type="text"></input>
-				</div>
-				<div class="pessoa">
-					<input placeholder="Quem" class="name" type="text"></input>
-					<input placeholder="Pagou" class="number" type="text"></input>
-				</div>
-				<div class="pessoa">
-					<input placeholder="Quem" class="name" type="text"></input>
-					<input placeholder="Pagou" class="number" type="text"></input>
-				</div>
+		<div id="pessoas">
+			<h1>CONTA DO PAPA</h1>
+			<div class="pessoa">
+				<input  placeholder="Quem" class="name" type="text"></input>
+				<input placeholder="Pagou" class="number" type="text"></input>
+			</div>
+			<div class="pessoa">
+				<input placeholder="Quem" class="name" type="text"></input>
+				<input placeholder="Pagou" class="number" type="text"></input>
+			</div>
+			<div class="pessoa">
+				<input placeholder="Quem" class="name" type="text"></input>
+				<input placeholder="Pagou" class="number" type="text"></input>
+			</div>
+			<div class="actions">
 				<button id="calcula">Calcula</button>
 				<a href="javascript:void(0)" id="adiciona">+ Adiciona pessoa</a>
 			</div>
-			<div id="resultado">
-				
-			</div>	
 		</div>
+		<div id="resultado"></div>
 
 		<script id="pessoa-template" type="text/x-handlebars-template">
 			<div class="pessoa">
