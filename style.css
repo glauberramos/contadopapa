@@ -9,6 +9,15 @@ h1 {
 	font-size: 1.2em;
 	font-weight: normal;
 	font-style: normal;
+	color: #34495e;
+	width: 100%;
+	display: block;
+	text-align: left;
+	font-style: bold;
+	height: 30px;
+	background: white;
+	margin: 0;
+	padding: 0;
 }
 
 i {
@@ -31,19 +40,24 @@ input {
 	padding: 10px 5px;
 	color: #34495e;
 	outline: none;
-	border: 1px solid #aaa;
-	width: 55%;
-	border-radius: 2px;
+	border: none;
+	border-bottom: 1px solid #BABABA;
+	width: 59%;
+	margin: 0;
+	float: left;
+}
+
+input:nth-child(odd) {
+	border-right: 1px solid #BABABA;
 }
 
 #pessoas {
-	padding: 10px 5px;
-	background: #34495e;
-	color: white;
+	background: white;
+	color: #BABABA;
 }
 
 .number {
-	width: 40%;
+	width: 41%;
 }
 
 .error {
@@ -58,36 +72,8 @@ input {
 	border-top: 4px solid white;
 }
 
-.name-container {
-	margin-right: 10px;
-}
-
-.name-container:before {
-	content: "QUEM";
-	font-family: "OpenSans";	
-	color: #999;
-	font-size: 0.6em;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 4.6em;
-	margin-left: 5px;
-	position: absolute;
-}
-
-.money-container:before {
-	content: "PAGOU";	
-	font-family: "OpenSans";
-	color: #999;
-	font-size: 0.6em;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 4.6em;
-	margin-left: 5px;
-	position: absolute;
-}
-
 .name, .number {
-	padding-left: 40px;
+	padding-left: 10px;
 }
 
 input::-webkit-input-placeholder {
@@ -100,10 +86,6 @@ input::-webkit-input-placeholder {
 
 #resultado {
 	margin-top: 50px;
-}
-
-.pessoa {
-	margin-bottom: 10px;
 }
 
 #result {
@@ -129,7 +111,7 @@ em {
 }
 
 a {
-	color: white;
+	color: black;
 	float: right;
 	margin-top: 7px;
 }
