@@ -36,13 +36,16 @@ input {
 	background: white;
 	font-size: 1.2em;
 	padding: 16px 5px;
-	outline: none;
-	border: none;
+	outline: 0;
+	border: 0;
 	border-bottom: 1px solid #ccc;
 	width: 59%;
 	margin: 0;
 	float: left;
 	color: #666;
+	-webkit-appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;
 }
 
 input:nth-child(odd) {
