@@ -53,7 +53,6 @@ h1 {
 	font-weight: normal;
 	font-style: normal;
 	color: #203A61;
-	width: 100%;
 	display: block;
 	text-align: left;
 	font-weight: bold;
@@ -137,7 +136,6 @@ input::-webkit-input-placeholder {
 	display: block;
 	background: #203A61;
 	padding: 10px 25px;
-	border-bottom: 4px solid white;
 }
 
 number {
@@ -149,7 +147,7 @@ number {
 em {
 	display: block;
 	font-size: 0.3em;
-	font-family: "OpenSansItalic";
+	font-family: "OpenSans";
 	font-weight: normal;
 }
 
